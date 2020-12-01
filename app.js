@@ -33,7 +33,7 @@ io.on('connection', function (socket) {
     })
 
     socket.on('join', (roomId) => {
-        console.log('join' + roomId)
+        console.log(`roomId join!`)
         if (roomMap[roomId] && roomMap[roomId].length === 2) {
             socket.emit('reject', {error: 'Room is full!'})
         }
